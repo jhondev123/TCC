@@ -1,4 +1,6 @@
 # TCC
+A ideia do projeto é criar um site para venda de marmitas em que o site tenha apenas uma página e não vai ser necessário login e cadastro, e não irá ser realizado o Pagamento pelo Site e sim pelo whatszapp, passando os dados do carrinho para o whatszapp como mensagem para o restaurante.
+
 ![image](https://user-images.githubusercontent.com/54044869/121618214-cc567a00-ca3c-11eb-997a-d617be56b403.png)
 
 this is the header, it has the buttons that will go down to the site and show the site information, and it has the logo as well.
@@ -16,3 +18,4 @@ and finally we have the website footer
 
 
 popups are being developed, in which they will get user data
+
