@@ -1,0 +1,59 @@
+/** Slider: body**/
+
+.slider {
+    display: block;
+    height: 400px;
+    padding-left: 100px;
+    padding-right: 100px;
+    width: 1000px;
+    margin: auto;
+    margin-top: 20px;
+    position: relative;
+}
+
+.slider li {
+    list-style: none;
+    position: absolute;
+}
+
+.slider img {
+    margin: auto;
+    height: 400px;
+    width: 1000px;
+    vertical-align: top;
+}
+
+.slider input {
+    display: none;
+}
+
+.slider label {
+    background-color: black;
+    bottom: 10px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: 10;
+}
+
+.slider li:nth-child(1) label {
+    left: 10px;
+}
+
+.slider li:nth-child(2) label {
+    left: 40px;
+    /** Somando 30 do anterior  **/
+}
+
+.slider img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider li input:checked~img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}

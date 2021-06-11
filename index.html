@@ -1,0 +1,96 @@
+<!Doctype html>
+<html lang="pt-br">
+<meta charset="utf-8">
+
+<head>
+    <title>Home</title>
+    <link rel="stylesheet" href="Style/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <div id="header"></div>
+    <section>
+        <div>
+            <ul class="slider">
+                <li>
+                    <input type="radio" id="slide1" name="slide" checked>
+                    <label for="slide1"></label>
+                    <img src="./Imagens/Restaurante.png">
+                </li>
+                <li>
+                    <input type="radio" id="slide2" name="slide" checked>
+                    <label for="slide2"></label>
+                    <img src="./Imagens/Teste2.png" alt="Icone do restaurante">
+                </li>
+            </ul>
+        </div>
+
+        <div>
+            <h1>MARMITAS</h1>
+            <h1>Peça as marmitas pelo site agora mesmo: </h1>
+            <div class="containera">
+
+                <div>
+                    <h2>Marmita pequena</h2>
+                    <img src="Imagens/Marmita_pequena.png" alt="marmita pequena">
+                    <div class="descrip">
+                        <h3>Descrição:</h3>
+                        <p>A marmita todos os dias vai vir com arroz, feijão, batata frita e a mistura depende do dia
+                        </p>
+                        <button>Adicionar ao carrinho</button>
+                        <button>Escolher personalizada</button>
+                    </div>
+                </div>
+
+                <div>
+                    <h2>Marmita média</h2>
+                    <img src="Imagens/Marmita_pequena.png" alt="marmita média">
+                    <h3>Descrição:</h3>
+                    <p>A marmita todos os dias vai vir com arroz, feijão, batata frita e a mistura depende do dia</p>
+                    <button>Adicionar ao carrinho</button>
+                    <button>Escolher personalizada</button>
+                </div>
+
+                <div>
+                    <h2>Marmita Grande</h2>
+                    <img src="Imagens/Marmita_pequena.png" alt="marmita grande">
+                    <h3>Descrição:</h3>
+                    <p>A marmita todos os dias vai vir com arroz, feijão, batata frita e a mistura depende do dia</p>
+                    <button>Adicionar ao carrinho</button>
+                    <button id="btnPopUp">Escolher personalizada</button>
+                </div>
+
+                <!-- <span></span>
+    <button action ="#" value="Fazer pedido">Fazer pedido</button> -->
+            </div>
+
+        </div>
+
+        <!--
+    <h1>Venha conhecer os deliciosos pratos feitos em nosso restaurante, </h1>
+    <h2>endereço</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d3617.5156789819607!2d-53.47974384993503!3d-24.94856392008023!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x94f3d1554d5b84dd%3A0x9ab2e0fc3838c2b6!2sRestaurante%20Nossa%20Fam%C3%ADlia%20-%20R.%20Fortaleza%2C%202050%20-%20Centro%2C%20Cascavel%20-%20PR%2C%2085810-051!3m2!1d-24.9485657!2d-53.477549599999996!5e0!3m2!1spt-BR!2sbr!4v1617975842588!5m2!1spt-BR!2sbr" width="300" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    -->
+    </section>
+
+    <div id="footer"></div>
+    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+   <script src="/JS/loadPop-Up.js"></script> 
+    <!-- <script src="sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="sweetalert2.min.css"> -->
+    <div class="#popup"></div>
+    <script>
+        $(function () {
+            $('#header').load("Modelos/header.html");
+            $('#footer').load("Modelos/footer.html");
+            $('#popup').load("Pop-Up/personalizada.html");
+        });
+    </script>
+    
+</body>
+
+</html>
