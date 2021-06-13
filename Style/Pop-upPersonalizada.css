@@ -3,7 +3,7 @@
     height: 100vh;
     background: rgba(0, 0, 0, .5);
     position: fixed;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     top: 0px;
@@ -20,6 +20,8 @@
     border: 10px solid red;
     box-shadow: 0 0 0 10px white;
     position: relative;
+   
+    
 }
 
 .fechar {
@@ -57,4 +59,12 @@
 
 .modal-container.mostrar {
     animation: modal.3s;
+}
+#obs {
+    display: block;
+}
+.formulario {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
