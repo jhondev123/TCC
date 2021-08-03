@@ -9,10 +9,10 @@
 
 <body>
 
-    <div id="header"></div>
+    <?= include_once __DIR__."/models/header.html";?> <!-- Chama o Header-->
     <section>
         <div>
-            <ul class="slider">
+            <ul class="slider"> <!-- Criando o Slider -->
                 <li>
                     <input type="radio" id="slide1" name="slide" checked>
                     <label for="slide1"></label>
@@ -25,7 +25,7 @@
                 </li>
             </ul>
         </div>
-
+        <!--Exposição dos produtos vendidos -->
         <div>
             <h1>MARMITAS</h1>
             <h1>Peça as marmitas pelo site agora mesmo: </h1>
@@ -38,8 +38,8 @@
                         <h3>Descrição:</h3>
                         <p>A marmita todos os dias vai vir com arroz, feijão, batata frita e a mistura depende do dia
                         </p>
-                        <button>Adicionar ao carrinho</button>
-                        <button>Escolher personalizada</button>
+                        <button class="btn btn-danger">Adicionar ao carrinho</button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Escolher personalizada</button>
                     </div>
                 </div>
 
@@ -48,8 +48,8 @@
                     <img src="Imagens/Marmita_pequena.png" alt="marmita média">
                     <h3>Descrição:</h3>
                     <p>A marmita todos os dias vai vir com arroz, feijão, batata frita e a mistura depende do dia</p>
-                    <button>Adicionar ao carrinho</button>
-                    <button>Escolher personalizada</button>
+                    <button class="btn btn-danger">Adicionar ao carrinho</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Escolher personalizada</button>
                 </div>
 
                 <div>
@@ -57,8 +57,8 @@
                     <img src="Imagens/Marmita_pequena.png" alt="marmita grande">
                     <h3>Descrição:</h3>
                     <p>A marmita todos os dias vai vir com arroz, feijão, batata frita e a mistura depende do dia</p>
-                    <button>Adicionar ao carrinho</button>
-                    <button id="btnPopUp">Escolher personalizada</button>
+                    <button class="btn btn-danger">Adicionar ao carrinho</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Escolher personalizada</button>
                 </div>
 
             </div>
@@ -66,25 +66,14 @@
         </div>
 
     </section>
-
-    <div id="footer"></div>
+    <!-- rodapé do site  -->
+    
+    <?= include_once __DIR__."/models/footer.html";?>
     <script src="//code.jquery.com/jquery-1.10.2.js"></script>
-    <script src="/JS/loadPop-Up.js"></script>
 
-    <script>
-        $(function() {
-            $('#header').load("Modelos/header.html");
-            $('#footer').load("Modelos/footer.html");
-            $('#popup').load("Pop-Up/personalizada.html");
-            $('#popup').hide();
-        });
-        $('#btnPopUp').click(function() {
-            $('#popup').show();
-        });
-    </script>
-    <div id="popup"></div>
-    <script>
-    </script>
+
 </body>
-
+<?php include_once __DIR__ . "/modals/custom_Lunchbox.html"?>
 </html>
+<?php
+
