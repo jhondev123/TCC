@@ -1,15 +1,49 @@
+<?php
+require_once __DIR__ . "/source/autoload.php";
+use source\classes\Order;
+use source\classes\Addres;
+use source\classes\Product;
+use source\classes\Client;
+$client=10;
+$cookieName = "login";
+$cookieValue = $client;
+//setcookie($cookieName,$cookieValue , time()+3600);
+if(!isset($_COOKIE[$cookieName])){
+    include_once __dir__."/modals/register.html";
+
+}
+
+
+if(count($_COOKIE) > 0) {
+    echo "Cookies estão ativos.";
+} else {
+    echo "Cookies não estão ativos.";
+}
+
+/**$product = new Product();
+$addres = new Addres(12,"rua antonio","coqueiral","8580-6252");
+$client = new Client("fiat","uno",$addres);
+$order = new Order($product,$client,21);
+$order->orderData(1);**/
+
+
+?>
+
 <!Doctype html>
 <html lang="pt-br">
 <meta charset="utf-8">
-<head>
-    <title>Home</title>
-    <link rel="stylesheet" href="Style/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-</head>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet" href="Style/style.css">
+        <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    </head>
 
-<body>
+    <body>
 
-    <?= include_once __DIR__."/models/header.html";?> <!-- Chama o Header-->
+        <!--Chama o Header-->
+        <?=include_once __DIR__ . "/modals/header.html"?> 
+        
     <section>
         <div>
             <ul class="slider"> <!-- Criando o Slider -->
@@ -69,7 +103,7 @@
     <!-- rodapé do site  -->
     
     <?= include_once __DIR__."/models/footer.html";?>
-    <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+    
 
 
 </body>
