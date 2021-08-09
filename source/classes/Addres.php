@@ -6,12 +6,16 @@ class Addres{
     private $district;
     private $cep;
     
-    public function __construct($number,$street,$district,$cep)
+    public function __construct($number,$street,$district,$cep=null)
     {
         $this->number=$number;
         $this->street=$street;
         $this->district=$district;
         $this->cep=$cep;
+    }
+    public function string()
+    {
+        return "{$this->street}{$this->number}{$this->district}{$this->cep}";
     }
 }
 

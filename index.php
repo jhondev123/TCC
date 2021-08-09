@@ -4,15 +4,43 @@ use source\classes\Order;
 use source\classes\Addres;
 use source\classes\Product;
 use source\classes\Client;
-$client=10;
-$cookieName = "login";
-$cookieValue = $client;
+
+
 //setcookie($cookieName,$cookieValue , time()+3600);
-if(!isset($_COOKIE[$cookieName])){
-    include_once __dir__."/modals/register.html";
+if(!isset($_COOKIE['login'])){
+    // chamando o form de registro
+    include_once __DIR__."/modals/register.html";
+    echo "
+    <script>
+        $( document ).ready(function() {
+            $('#staticBackdro').modal('show');
+        });
+    </script>";
+    // pegando o endereço
+    $number = $_POST['inputNumber'];
+    $street = $_POST['inputStreet'];
+    $district = $_POST['inputDistrict'];
+    $CEP = $_POST['inputCEP'];
+    // instanciando um endereço
+    $addres = new Addres($number,$street,$district,$CEP);
+    // pegando os dados do cliente
+    $name = $_POST['inputName'];
+    $lastname = $_POST['inputLastname'];
+    $cellphone = $_POST['inputCellphone'];
+    $mail = $_POST['inputMail'];
+    //instanciando um client
+    $client = new Client($name,$lastname,$addres,$cellphone,$mail);
+    // criando os cookies do client
+    $cookieName = "login";
+    $addresConverted = $addres->string();
+    $cookieValue = $client->conversionToString($addresConverted);
 
+
+    setrawcookie($cookieName,$cookieValue , time()+3600);
+
+    
 }
-
+//setcookie($cookieName, '', time()-3600);
 
 if(count($_COOKIE) > 0) {
     echo "Cookies estão ativos.";
@@ -20,13 +48,10 @@ if(count($_COOKIE) > 0) {
     echo "Cookies não estão ativos.";
 }
 
-/**$product = new Product();
-$addres = new Addres(12,"rua antonio","coqueiral","8580-6252");
-$client = new Client("fiat","uno",$addres);
-$order = new Order($product,$client,21);
-$order->orderData(1);**/
-
-
+/**$product = new Product();**/
+/**$addres = new Addres(12,"rua antonio","coqueiral","8580-6252");
+$client = new Client($name,$lastname,$addres,$cellphone,$mail);
+$order = new Order($product,$client,21);**/
 ?>
 
 <!Doctype html>
@@ -42,7 +67,7 @@ $order->orderData(1);**/
     <body>
 
         <!--Chama o Header-->
-        <?=include_once __DIR__ . "/modals/header.html"?> 
+        <?=include_once __DIR__ . "/models/header.html"?> 
         
     <section>
         <div>
