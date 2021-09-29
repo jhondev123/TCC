@@ -2,7 +2,7 @@
 function getCon()//função que retorna a conexão
 {
     //dados do banco
-    $a='mysql:host=localhost;dbname=Banco;charse=utf8';
+    $a='mysql:host=localhost;dbname=TCC;charse=utf8';
     $b='root';
     $c="";
 try { //caso houver uma exceção

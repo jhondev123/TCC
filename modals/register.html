@@ -5,31 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- JavaScript Bundle with Popper -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>   
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <style>
+      body{
+        width: 600px;
+        height: 600px;
+    }
+    .form-center{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    </style>
 </head>
 <body>
-    <!-- Button trigger modal -->
-
-  <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Launch static backdrop modal
-  </button> -->
-
-  <!-- Modal -->
-  <div class="modal fade" id="staticBackdro" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Cadastro</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-
-          <!-- formulário dentro do modal -->
-          <form action = "/TCC/index.php" method="POST">
+  <!-- formulário -->
+          <!-- formulário dentro do -->
+          
+          <form action ="/../TCC/register.php" method="POST">
             <!-- name-->
-            <div class="mb-3 row">
+            
+            <div class="mb-4 row">
               <label for="name" class="col-sm-2 col-form-label">nome</label>
               <div class="col-sm-10">
                 <input type="text"  id="name"name="inputName"class="form-control">
@@ -38,8 +35,8 @@
                 <!-- fim name-->
 
                 <!-- lastname-->
-                <div class="mb-3 row">
-                  <label for="lastname" class="col-sm-2 col-form-label">lastname</label>
+                <div class="mb-4 row">
+                  <label for="lastname" class="col-sm-2 col-form-label">sobrenome</label>
                   <div class="col-sm-10">
                     <input type="text"  id="lastName"name="inputLastname"class="form-control">
                     </div>
@@ -47,8 +44,8 @@
                 <!-- fim lastname-->
 
                 <!-- addres-->
-                 <!-- street -->
-                 <div class="mb-3 row">
+                <!-- street -->
+                <div class="mb-4 row">
                   <label for="street" class="col-sm-2 col-form-label">Rua</label>
                   <div class="col-sm-10">
                     <input type="text"  id="addres"name="inputStreet"class="form-control">
@@ -57,28 +54,28 @@
                     <!-- fim street -->
 
                     <!-- number -->
-                    <div class="mb-3 row">
+                    <div class="mb-4 row">
                       <label for="number" class="col-sm-2 col-form-label">Numero</label>
                       <div class="col-sm-10">
-                        <input type="text"  id="number"name="inputNumber">
+                        <input type="text"  id="number"name="inputNumber"class="form-control">
                         </div>
                         </div>
                     <!-- fim number -->
 
                     <!-- disctrict -->
-                    <div class="mb-3 row">
+                    <div class="mb-4 row">
                       <label for="district" class="col-sm-2 col-form-label">Bairro</label>
                       <div class="col-sm-10">
-                        <input type="text"  id="district"name="inputDistrict">
+                        <input type="text"  id="district"name="inputDistrict"class="form-control">
                         </div>
                         </div>
                     <!-- fim district -->
 
                       <!-- CEP -->
-                    <div class="mb-3 row">
+                    <div class="mb-4 row">
                       <label for="CEP" class="col-sm-2 col-form-label">CEP</label>
                       <div class="col-sm-10">
-                        <input type="text"  id="CEP"name="inputCEP">
+                        <input type="text"  id="CEP"name="inputCEP"class="form-control">
                         </div>
                         </div>
                     <!-- fim CEP -->
@@ -86,7 +83,7 @@
                 <!-- fim addres-->
 
                 <!-- cellphone -->
-                <div class="mb-3 row">
+                <div class="mb-4 row">
                   <label for="cellphone" class="col-sm-2 col-form-label">Celular</label>
                   <div class="col-sm-10">
                     <input type="text"  id="cellphone"name="inputCellphone"class="form-control"value="(45)">
@@ -95,26 +92,24 @@
                 <!-- fim cellphone -->
 
                 <!-- email-->
-            <div class="mb-3 row">
+            <div class="mb-4 row">
               <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
               <div class="col-sm-10">
-                <input type="text"  id="staticEmail" value="email@example.com"name="inputMail">
+                <input type="text"  id="staticEmail" value="email@example.com"name="inputMail"class="form-control">
               </div>
             </div>
             <!-- fim email-->
-        </div>
-        <div class="modal-footer">
-         
-          <button type="submit" class="btn btn-primary">Salvar dados</button>
+          </div>
+          <button type="submit" class="btn btn-primary"value="save">Salvar dados</button>
+          <button type="reset" class="btn btn-primary"value="clear">limpar </button>
+          </div>
+
           <!-- fim do formulário-->
+
         </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script>
-      </script>
+      
+      
   
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

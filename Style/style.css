@@ -1,14 +1,17 @@
 
-@import "slider.css";
+
 section{
-    height: 1500px;
+    height: 1200px;
+    background-color: #808080;
   }
   .containera{
+    
     width: 1000;
     height: 300px;
-  margin-left: 80px;
-  display: flex;
-      justify-content: space-between;
+    margin-left: 80px;
+    display: flex;
+    justify-content: space-between;
+
   }
   .containera h1{
   color: black;
@@ -28,4 +31,3 @@ section{
   h1{
       text-align: center;
   }
-  
